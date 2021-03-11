@@ -152,7 +152,7 @@ void Cab_SimAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, juce
 
     for (int channel = 0; channel < totalNumInputChannels; ++channel)
     {
-        auto* channelData = buffer.getWritePointer (channel);
+        //auto* channelData = buffer.getWritePointer (channel);
 
         juce::dsp::AudioBlock<float> audioBlock {buffer};
         convolutionProcessor.process(juce::dsp::ProcessContextReplacing<float> (audioBlock));
